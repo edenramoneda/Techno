@@ -1,0 +1,2 @@
+Hi we received your order request (product_name) with the quantity: (quantity) and it's currently pending
+Please reply to let us know if you want to process your order or not in 24 hours. Otherwise we will cancel it.
