@@ -37,7 +37,7 @@
                 </div>
                     <ul class="li-navs list-unstyled mt-3">
                         <li class="nav-item">
-                        <a class="nav-link text-white" href="#">
+                        <a class="nav-link text-white" href="https://analytics.google.com/analytics/web/?authuser=0#/report-home/a134726381w194825426p190162913" target="blank">
                             <i class="fa fa-chart-bar" aria-hidden="true"></i> Analytics</a>
                         </li>
                         <li class="nav-item">
@@ -77,4 +77,7 @@
 <script type="text/javascript" src="../js/style.js"></script>
 <script type="text/javascript" src="../js/parallax.js"></script>
 <script type="text/javascript" src="../js/synapse.js"></script>
+
+
+
 </html>

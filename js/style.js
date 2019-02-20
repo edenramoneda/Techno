@@ -190,7 +190,7 @@ $(document).ready(function() {
            $(".form-order-main-err").hide(1000);
            $(".form-order-main-success").fadeOut(3000);
            setTimeout(() => {
-             window.location.href = "../Techno";
+             window.location.href = "../";
            }, 1000);
          });
       }
