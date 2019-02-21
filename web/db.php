@@ -8,9 +8,9 @@ $pdoOptions = array(
  * Connect to MySQL and instantiate the PDO object.
  */
     $pdo = new PDO(
-        "mysql:host=" . "127.0.0.1:3333" . ";dbname=" . "techno", //DSN
-        "newuser", //Username
-        "589123456987", //Password
+        "mysql:host=" . "db4free.net:3306" . ";dbname=" . "ramsweetsph_17", //DSN
+        "edenramoneda17", //Username
+        "3d3nr4m0n3d4", //Password
         $pdoOptions //Options
     );
    // echo "Connected successfully"; 
