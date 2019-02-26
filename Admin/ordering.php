@@ -273,10 +273,11 @@
     </div>
     <div id="order_d" class="container-fluid tab-pane fade"><br>
         <div class="card">
+                <?php 
+                    echo '
+                    <div class="card-header">Total Customers: <strong>' . $num_rowsD . '</strong></div>
             <div class="card-body">
                     <div class="table-responsive" id="tableProduct" style="width:100%;">
-                        <?php 
-                            echo '
                             <table class="table table-hover table-sm table-bordered">
                                 <thead class="thead-light"></thead>
                                     <tr>
