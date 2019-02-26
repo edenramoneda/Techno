@@ -1,6 +1,6 @@
 //RECAPTCHA
-var onloadCallback = function(response) {
-  console.log(response);
+var onloadCallback = function() {
+  console.log("recaptcha ready");
   grecaptcha.render('contact_recaptcha', {
     'sitekey' : '6LcF_pMUAAAAALX0UHZIb9Fbdxk5ylTIkXQyPWqT'
   });
