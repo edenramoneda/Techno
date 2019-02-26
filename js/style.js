@@ -1,6 +1,9 @@
 //RECAPTCHA
 var onloadCallback = function() {
-  alert("grecaptcha is ready!");
+  console.log("grecaptcha is ready!");
+  grecaptcha.render('#contact_recaptcha', {
+    'sitekey' : '6LcF_pMUAAAAALX0UHZIb9Fbdxk5ylTIkXQyPWqT'
+  });
 };
 function closeNav() {
   document.getElementById("sidebar").style.width = "0";
