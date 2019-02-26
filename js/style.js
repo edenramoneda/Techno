@@ -35,6 +35,7 @@ $(document).ready(function() {
         $(".contact-form-err").empty();
         $(".contact-form-err").fadeIn(1000);
         $(".contact-form-err").append("Please check the recaptcha");
+        $(".contact-form-err").fadeOut(3000);
       }
       else {
         httpAjaxFD("post", "contactsent", fd).then(res => {
