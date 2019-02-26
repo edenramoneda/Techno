@@ -34,10 +34,7 @@ $(document).ready(function() {
         $(".contact-form-err").append("There was an error while submitting the form. Please try again!");
         $(".contact-form-err").fadeOut(3000);
       }*/
-      if (response.length === 0) {
-        console.log("captcha mandatory");
-      }
-      if (fullname == "" || email == "" || message == "") {
+      if (fullname == "" || email == "" || message == "" || response.length === 0) {
         //   $(".form-feedback-err").html("All fields are required")
         $(".contact-form-err").empty();
         $(".contact-form-err").fadeIn(1000);
