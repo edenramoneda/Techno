@@ -47,6 +47,7 @@ $(document).ready(function() {
               $("#ContactForm").trigger("reset");
               $(".contact-form-err").hide();
               $(".contact-form-success").fadeOut(3000);
+              grecaptcha.reset();
             });
       }
     });
