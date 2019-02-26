@@ -1,10 +1,10 @@
 //RECAPTCHA
-var onloadCallback = function() {
+/*var onloadCallback = function() {
   console.log("recaptcha ready");
   grecaptcha.render('contact_recaptcha', {
     'sitekey' : '6LcF_pMUAAAAALX0UHZIb9Fbdxk5ylTIkXQyPWqT'
   });
-};
+};*/
 function closeNav() {
   document.getElementById("sidebar").style.width = "0";
   document.getElementById("overlay").classList.remove("overlay3");
