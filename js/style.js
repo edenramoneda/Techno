@@ -1,10 +1,10 @@
 //RECAPTCHA
-/*var onloadCallback = function() {
+var onloadCallback = function() {
   console.log("recaptcha ready");
   grecaptcha.render('contact_recaptcha', {
     'sitekey' : '6LcF_pMUAAAAALX0UHZIb9Fbdxk5ylTIkXQyPWqT'
   });
-};*/
+};
 function closeNav() {
   document.getElementById("sidebar").style.width = "0";
   document.getElementById("overlay").classList.remove("overlay3");
@@ -18,7 +18,6 @@ function openNav() {
 $(document).ready(function() {
     //for Contact Form Index
     $("#ContactForm").submit(function(e) {
-      var recaptcha = $("#contact_recaptcha").val();
 
       e.preventDefault();
       var fullname = $("#fn").val();
@@ -26,10 +25,8 @@ $(document).ready(function() {
       var message = $("#m").val();
       var fd = new FormData(this);
 
-      if(recaptcha == ""){
-        alert("Error");
-        console.log(recaptcha);
-      }
+      var $captcha = $( '#contact_recaptcha' ),
+      response = grecaptcha.getResponse();
     /*  if (fullname == "" || email == "" || message == "") {
         //   $(".form-feedback-err").html("All fields are required")
         $(".contact-form-err").empty();
@@ -37,6 +34,9 @@ $(document).ready(function() {
         $(".contact-form-err").append("There was an error while submitting the form. Please try again!");
         $(".contact-form-err").fadeOut(3000);
       }*/
+      if (response.length === 0) {
+        console.log("captcha mandatory");
+      }
       else {
             httpAjaxFD("post", "contactsent", fd).then(res => {
               $(".contact-form-success").fadeIn(1000);
