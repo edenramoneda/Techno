@@ -18,7 +18,7 @@ function openNav() {
 $(document).ready(function() {
     //for Contact Form Index
     $("#ContactForm").submit(function(e) {
-      var recaptcha = $("#contact_recaptcha").getResponse();
+      var recaptcha = $("#contact_recaptcha").val();
 
       e.preventDefault();
       var fullname = $("#fn").val();
@@ -30,7 +30,7 @@ $(document).ready(function() {
         //   $(".form-feedback-err").html("All fields are required")
         $(".contact-form-err").fadeIn(1000);
         $(".contact-form-err").fadeOut(3000);
-      }else if(recaptcha == ""){
+      }else if(recaptcha.length == 0){
         console.log(recaptcha);
         $(".contact-form-err").empty();
         $(".contact-form-err").fadeIn(1000);
