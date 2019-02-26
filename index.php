@@ -129,6 +129,10 @@
                                 <input type="number" class="form-control" id="order_product_quantity" name="order_product_quantity" min="1">
                             </div>
                             <div class="form-group">
+                                <label>Address (for Delivery)</label>
+                                <textarea class="form-control" id="order_product_address" name="order_product_address" rows="3" placeholder="Optional"></textarea>
+                            </div>
+                            <div class="form-group">
                                 <label>Additional Note</label>
                                 <textarea class="form-control" id="order_product_additional_note" name="order_product_additional_note" rows="3" placeholder="Optional"></textarea>
                             </div>
