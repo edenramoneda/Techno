@@ -26,7 +26,7 @@ $(document).ready(function() {
       var message = $("#m").val();
       var fd = new FormData(this);
 
-      if (fullname == "" || email == "" || message == "" || recaptcha == "") {
+      if (fullname == "" || email == "" || message == "") {
         //   $(".form-feedback-err").html("All fields are required")
         $(".contact-form-err").fadeIn(1000);
         $(".contact-form-err").fadeOut(3000);
