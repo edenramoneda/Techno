@@ -18,6 +18,7 @@ function openNav() {
 $(document).ready(function() {
     //for Contact Form Index
     $("#ContactForm").submit(function(e) {
+      var recaptcha = $("#contact_recaptcha").val();
 
       e.preventDefault();
       var fullname = $("#fn").val();
@@ -25,11 +26,17 @@ $(document).ready(function() {
       var message = $("#m").val();
       var fd = new FormData(this);
 
-      if (fullname == "" || email == "" || message == "") {
+      if (fullname == "" || email == "" || message == "" || recaptcha == "") {
         //   $(".form-feedback-err").html("All fields are required")
         $(".contact-form-err").fadeIn(1000);
         $(".contact-form-err").fadeOut(3000);
-      } else {
+      } 
+      else if(recaptcha === ""){
+        $(".contact-form-err").empty();
+        $(".contact-form-err").fadeIn(1000);
+        $(".contact-form-err").append("Please check the recaptcha");
+      }
+      else {
         httpAjaxFD("post", "contactsent", fd).then(res => {
           $(".contact-form-success").fadeIn(1000);
           $("#ContactForm").trigger("reset");
