@@ -26,15 +26,11 @@ $(document).ready(function() {
       var message = $("#m").val();
       var fd = new FormData(this);
 
-      if (fullname == "" || email == "" || message == "") {
+      if (fullname == "" || email == "" || message == "" || recaptcha == "") {
         //   $(".form-feedback-err").html("All fields are required")
-        $(".contact-form-err").fadeIn(1000);
-        $(".contact-form-err").fadeOut(3000);
-      }else if(recaptcha.length == 0){
-        console.log(recaptcha);
         $(".contact-form-err").empty();
         $(".contact-form-err").fadeIn(1000);
-        $(".contact-form-err").append("Please check the recaptcha");
+        $(".contact-form-err").append("There was an error while submitting the form. Please try again!");
         $(".contact-form-err").fadeOut(3000);
       }
       else {
