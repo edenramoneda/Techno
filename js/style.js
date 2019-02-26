@@ -204,7 +204,6 @@ $(document).ready(function() {
            $(".form-order-main-success").fadeIn(1000);
            $("#OrderRequestForm").trigger("reset");
            $(".form-order-main-err").hide(1000);
-           $("#OrderModalForm").reset();
            $(".form-order-main-success").fadeOut(3000);
            setTimeout(() => {
              window.location.href = "../";
