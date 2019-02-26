@@ -192,8 +192,7 @@
                 <p class="text-center text-white"><a class="text-white" href="mailto:ramsweetsph@gmail.com?subject=RAM Sweets PH';"><img src="image/Gmail_80px.png" height="20" width="20"> ramsweetsph@gmail.com</a></p>
                 <p class="text-center text-white"><img src="image/Phone_80px.png" height="18" width="18"> 09121928327</p>
                 <p class="text-center text-white">Address: 51 A. Mendez Baesa Quezon City</p>
-                <p class="text-center text-white">Areas for Delivery Covered:</p>
-                <span class="text-center text-white">NCR, Bulacan </span>
+                <p class="text-center text-white">Areas for Delivery Covered: NCR, Bulacan</p>
                 <p class="text-center text-white">&copy; RAM Sweets PH <?php echo date('Y'); ?> | All Rights Reserved</p>
                 
             </div>
