@@ -31,19 +31,21 @@ $(document).ready(function() {
         $(".contact-form-err").fadeIn(1000);
         $(".contact-form-err").fadeOut(3000);
       } 
-      else if(recaptcha === ""){
-        $(".contact-form-err").empty();
-        $(".contact-form-err").fadeIn(1000);
-        $(".contact-form-err").append("Please check the recaptcha");
-        $(".contact-form-err").fadeOut(3000);
-      }
       else {
-        httpAjaxFD("post", "contactsent", fd).then(res => {
-          $(".contact-form-success").fadeIn(1000);
-          $("#ContactForm").trigger("reset");
-          $(".contact-form-err").hide();
-          $(".contact-form-success").fadeOut(3000);
-        });
+        if(recaptcha === ""){
+          $(".contact-form-err").empty();
+          $(".contact-form-err").fadeIn(1000);
+          $(".contact-form-err").append("Please check the recaptcha");
+          $(".contact-form-err").fadeOut(3000);
+        }else{
+            httpAjaxFD("post", "contactsent", fd).then(res => {
+              $(".contact-form-success").fadeIn(1000);
+              $("#ContactForm").trigger("reset");
+              $(".contact-form-err").hide();
+              $(".contact-form-success").fadeOut(3000);
+            });
+        }
+
       }
     });
 
