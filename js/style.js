@@ -26,7 +26,7 @@ $(document).ready(function() {
       var message = $("#m").val();
       var fd = new FormData(this);
 
-      if(recaptcha === null){
+      if(recaptcha === ""){
         alert("Error");
       }
       if (fullname == "" || email == "" || message == "") {
