@@ -27,15 +27,8 @@ $(document).ready(function() {
 
       var $captcha = $( '#contact_recaptcha' ),
       response = grecaptcha.getResponse();
-    /*  if (fullname == "" || email == "" || message == "") {
-        //   $(".form-feedback-err").html("All fields are required")
-        $(".contact-form-err").empty();
-        $(".contact-form-err").fadeIn(1000);
-        $(".contact-form-err").append("There was an error while submitting the form. Please try again!");
-        $(".contact-form-err").fadeOut(3000);
-      }*/
+
       if (fullname == "" || email == "" || message == "" || response.length === 0) {
-        //   $(".form-feedback-err").html("All fields are required")
         $(".contact-form-err").empty();
         $(".contact-form-err").fadeIn(1000);
         $(".contact-form-err").append("There was an error while submitting the form. Please try again!");
