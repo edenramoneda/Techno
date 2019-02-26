@@ -26,8 +26,9 @@ $(document).ready(function() {
       var message = $("#m").val();
       var fd = new FormData(this);
 
-      if(recaptcha === ""){
+      if(recaptcha == ""){
         alert("Error");
+        console.log(recaptcha);
       }
     /*  if (fullname == "" || email == "" || message == "") {
         //   $(".form-feedback-err").html("All fields are required")
