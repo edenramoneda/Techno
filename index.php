@@ -167,7 +167,7 @@
                             <textarea class="form-control text-left" placeholder="Message" rows="3" name="m" id="m"></textarea>
                         </div>
                         <div class="form-group">
-                        <div class="g-recaptcha" data-sitekey="6Lcd34UUAAAAAAvjnBOoFrF8E4KntXAjAUEkrxko" id="g-recaptcha-response"></div><br>
+                        <div class="g-recaptcha" data-sitekey="6LcF_pMUAAAAALX0UHZIb9Fbdxk5ylTIkXQyPWqT"></div>
                             <input type="submit" class="btn btn-light btn-sm" name="submit">
                         </div>
                     </form>

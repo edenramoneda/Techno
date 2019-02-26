@@ -276,8 +276,8 @@
                 <?php 
                     echo '
                     <div class="card-header">Total Customers: <strong>' . $num_rowsD . '</strong></div>
-            <div class="card-body">
-                    <div class="table-responsive" id="tableProduct" style="width:100%;">
+                    <div class="card-body">
+                        <div class="table-responsive" id="tableProduct" style="width:100%;">
                             <table class="table table-hover table-sm table-bordered">
                                 <thead class="thead-light"></thead>
                                     <tr>
