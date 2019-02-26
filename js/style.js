@@ -32,7 +32,7 @@ $(document).ready(function() {
         $(".contact-form-err").fadeOut(3000);
       } 
       else {
-        if(recaptcha === ""){
+        if(recaptcha == ""){
           $(".contact-form-err").empty();
           $(".contact-form-err").fadeIn(1000);
           $(".contact-form-err").append("Please check the recaptcha");
