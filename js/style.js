@@ -184,6 +184,7 @@ $(document).ready(function() {
       modal.find(".modal-body #order_product_id").val(o_pid);
       modal.find(".modal-body #order_product_name").val(o_pname);
     }); 
+
     $("#OrderModalForm").submit(function(e) {
       //  $("#EditProductForm").attr("action", "updateproduct");
       e.preventDefault();
@@ -209,6 +210,7 @@ $(document).ready(function() {
          });
       }
     });
+    
     $("#OrderProcessModal").on("show.bs.modal", function(event) {
       var opbutton = $(event.relatedTarget);
       var oporid = opbutton.data("oporid");
