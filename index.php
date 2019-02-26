@@ -130,7 +130,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Address (for Delivery)</label>
-                                <textarea class="form-control" id="order_product_address" name="order_product_address" rows="3" placeholder="Optional"></textarea>
+                                <textarea class="form-control" id="order_product_address" name="order_product_address" rows="3"></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Additional Note</label>
