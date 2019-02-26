@@ -129,6 +129,10 @@
                                 <input type="number" class="form-control" id="order_product_quantity" name="order_product_quantity" min="1">
                             </div>
                             <div class="form-group">
+                                <label>Address (for Delivery)</label>
+                                <textarea class="form-control" id="order_product_address" name="order_product_address" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
                                 <label>Additional Note</label>
                                 <textarea class="form-control" id="order_product_additional_note" name="order_product_additional_note" rows="3" placeholder="Optional"></textarea>
                             </div>
@@ -175,20 +179,21 @@
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4">
                 <h4 class="text-center text-white">ABOUT US</h4>
-                <p class="text-justify text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis justo eu erat suscipit, 
-                    vel dictum tellus elementum. Nulla auctor commodo finibus. Ut ornare eget ipsum ut pulvinar. 
-                    Mauris sed augue quis nisl dignissim semper in id massa. Proin sed purus augue. 
-                    Cras efficitur quis augue non rhoncus. Morbi suscipit neque nunc, et rutrum nibh auctor id. 
-                    Praesent viverra mauris id viverra ornare. In hac habitasse platea dictumst. Nulla vitae magna volutpat, 
-                    interdum urna quis, blandit orci.
+                <p class="text-justify text-white">RAM Sweets PH is a small new food business established in January 2019
+                    It offers fresh sweet desserts that can customers buy.RAM Sweets PH consists of three women who formed
+                    RAM Sweets PH! Since RAM Sweets PH was just recent established We are now looking forward for will be our 
+                    future customers and future branches will be open in some areas soon to serve the customers better and without hassle
+                    for our logistics.
                 </p>
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4">
                 <h4 class="text-center text-white mb-3">CONTACT INFO</h4>
-                <p class="text-center text-white"><a class="text-white" href="mailto:ramsweetsph@gmail.com?subject=RAM Sweets PH';"><img src="image/Gmail_80px.png" height="20" width="20"> ramsweetsph@gmail.com</a></p>
-                <p class="text-center text-white"><img src="image/Phone_80px.png" height="18" width="18"> 09121928327</p>
-                <p class="text-center text-white">Address: 51 A. Mendez Baesa Quezon City</p>
-                <p class="text-center text-white">&copy; RAM Sweets PH <?php echo date('Y'); ?> | All Rights Reserved</p>
+                <p class="text-justify text-white">If you have any comments, concerns, and questions Please contact us!</p>
+                <p class="text-justify text-white"><a class="text-white" href="mailto:ramsweetsph@gmail.com?subject=RAM Sweets PH';"><img src="image/Gmail_80px.png" height="20" width="20"> ramsweetsph@gmail.com</a></p>
+                <p class="text-justify text-white"><img src="image/Phone_80px.png" height="18" width="18"> 09121928327</p>
+                <p class="text-justify text-white">Address: 51 A. Mendez Baesa Quezon City</p>
+                <p class="text-justify text-white">Areas for Delivery Covered: NCR and Bulacan</p>
+                <p class="text-justify text-white">&copy; RAM Sweets PH <?php echo date('Y'); ?> | All Rights Reserved</p>
                 
             </div>
         </div>

@@ -44,13 +44,14 @@
                             <table class="table table-hover table-sm table-bordered">
                                 <thead class="thead-light"></thead>
                                     <tr>
+                                        <th>Status</th>
                                         <th colspan="4">Date Requested</th>
                                         <th colspan="4">Full Name</th>
                                         <th>Email</th>
                                         <th>Contact Number</th>
                                         <th>Product Name</th>
                                         <th>Quantity</th>
-                                        <th>Status</th>
+                                        <th>Address</th>
                                         <th>Additinal Note</th>
                                         <th>Action</th>
                                     </tr>
@@ -64,18 +65,19 @@
                                         $count = $count + 1;
                                         echo '
                                         <tr>
+                                            <td>' .$row['req_status']. '</td>
                                             <td colspan="4">' .$row['created_at'].'</td>
                                             <td colspan="4">' .$row['full_name'].'</td>
                                             <td>' .$row['email'].'</td>
                                             <td>' .$row['contact_number'].'</td>
                                             <td>' .$row['product_name']. '</td>
                                             <td>' .$row['quantity']. '</td>
-                                            <td>' .$row['req_status']. '</td>
+                                            <td>' .$row['address']. '</td>
                                             <td>' .substr($row['additional_note'],0,10). '....</td>
                                             <td>
                                                 <button type="button" data-orid="'.$row['or_id']. '"data-fullname="'.$row['full_name'].'"
                                                 data-email="'.$row['email']. '" data-contactnumber="'.$row['contact_number']. '" data-productname="' .$row['product_name']. '"
-                                                data-quantity="' .$row['quantity'].'" data-additionalnote="' .$row['additional_note']. '" data-status="' .$row['req_status'].  '"
+                                                data-quantity="' .$row['quantity'].' "data-address="'.$row['address']. '" data-additionalnote="' .$row['additional_note']. '" data-status="' .$row['req_status'].  '"
                                                 data-toggle="modal" data-target="#OrderRequestModal"
                                                 class="btn btn-mybutton btn-sm" title="Update Status"><i class="fa fa-handshake"></i></button>
                                                 &ensp;
@@ -133,6 +135,10 @@
                                 <input type="text" class="form-control" id="quantity" name="quantity" disabled>
                             </div>
                             <div class="form-group">
+                                <label>Address (For Delivery)</label>
+                                <textarea class="form-control" id="address" name="address" rows="3" disabled></textarea>
+                            </div>
+                            <div class="form-group">
                                 <label>Additional Note</label>
                                 <textarea class="form-control" id="additional_note" name="additional_note" rows="3" disabled></textarea>
                             </div>
@@ -162,13 +168,14 @@
                             <table class="table table-hover table-sm table-bordered">
                                 <thead class="thead-light"></thead>
                                     <tr>
+                                        <th>Status</th>
                                         <th colspan="4">Date Requested</th>
                                         <th colspan="4">Full Name</th>
                                         <th>Email</th>
                                         <th>Contact Number</th>
                                         <th>Product Name</th>
                                         <th>Quantity</th>
-                                        <th>Status</th>
+                                        <th>Address</th>      
                                         <th>Additinal Note</th>
                                         <th>Action</th>
                                     </tr>
@@ -182,18 +189,19 @@
                                         $countOP = $countOP + 1;
                                         echo '
                                         <tr>
+                                            <td>' .$rowOP['req_status']. '</td>
                                             <td colspan="4">' .$rowOP['created_at'].'</td>
                                             <td colspan="4">' .$rowOP['full_name'].'</td>
                                             <td>' .$rowOP['email'].'</td>
                                             <td>' .$rowOP['contact_number'].'</td>
                                             <td>' .$rowOP['product_name']. '</td>
                                             <td>' .$rowOP['quantity']. '</td>
-                                            <td>' .$rowOP['req_status']. '</td>
+                                            <td>' .$rowOP['address']. '</td>
                                             <td>' .substr($rowOP['additional_note'],0,10). '....</td>
                                             <td>
                                                 <button type="button" data-oporid="'.$rowOP['or_id']. '"data-opfullname="'.$rowOP['full_name'].'"
                                                 data-opemail="'.$rowOP['email']. '" data-opcontactnumber="'.$rowOP['contact_number']. '" data-opproductname="' .$rowOP['product_name']. '"
-                                                data-opquantity="' .$rowOP['quantity'].'" data-opadditionalnote="' .$rowOP['additional_note']. '" data-opstatus="' .$rowOP['req_status'].  '"
+                                                data-opquantity="' .$rowOP['quantity'].'" data-opaddress="'.$rowOP['address'].'"data-opadditionalnote="' .$rowOP['additional_note']. '" data-opstatus="' .$rowOP['req_status'].  '"
                                                 data-toggle="modal" data-target="#OrderProcessModal"
                                                 class="btn btn-mybutton btn-sm" title="Update Status"><i class="fa fa-handshake"></i></button>
                                                 &ensp;
@@ -251,6 +259,10 @@
                                 <input type="text" class="form-control" id="on_p_quantity" name="on_p_quantity" disabled>
                             </div>
                             <div class="form-group">
+                                <label>Address (For Delivery)</label>
+                                <textarea class="form-control" id="on_p_address" name="on_p_address" rows="3" disabled></textarea>
+                            </div>
+                            <div class="form-group">
                                 <label>Additional Note</label>
                                 <textarea class="form-control" id="on_p_additional_note" name="on_p_additional_note" rows="3" disabled></textarea>
                             </div>
@@ -281,13 +293,14 @@
                             <table class="table table-hover table-sm table-bordered">
                                 <thead class="thead-light"></thead>
                                     <tr>
+                                        <th>Status</th>
                                         <th colspan="4">Date Requested</th>
                                         <th colspan="4">Full Name</th>
                                         <th>Email</th>
                                         <th>Contact Number</th>
                                         <th>Product Name</th>
                                         <th>Quantity</th>
-                                        <th>Status</th>
+                                        <th>Address</th>
                                         <th>Additinal Note</th>
                                    <!--     <th>Action</th>-->
                                     </tr>
@@ -301,13 +314,14 @@
                                         $countD = $countD + 1;
                                         echo '
                                         <tr>
+                                            <td>' .$rowD['req_status']. '</td>
                                             <td colspan="4">' .$rowD['created_at'].'</td>
                                             <td colspan="4">' .$rowD['full_name'].'</td>
                                             <td>' .$rowD['email'].'</td>
                                             <td>' .$rowD['contact_number'].'</td>
                                             <td>' .$rowD['product_name']. '</td>
                                             <td>' .$rowD['quantity']. '</td>
-                                            <td>' .$rowD['req_status']. '</td>
+                                            <td>' .$rowD['address']. '</td>
                                             <td>' .substr($rowD['additional_note'],0,10). '....</td>
                                           <!--  <td>
                                                 <button type="button" class="btn btn-sm btn-mybutton" title="Message ' .$rowD['full_name']. '"><i class="fa fa-envelope"></i></button>

@@ -15,7 +15,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>RAM Sweets PH</title>
+        <title>RAM Sweets PH | Admin Side</title>
         <link rel="icon" href="image/logo-min.png">      
         <link rel="stylesheet" href="../fonts/fontawesome-all.min.css">
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"> 

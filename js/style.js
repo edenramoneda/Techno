@@ -148,6 +148,7 @@ $(document).ready(function() {
       var contactnumber = button.data("contactnumber");
       var productname = button.data("productname");
       var quantity = button.data("quantity");
+      var address = button.data("address");
       var additionalnote = button.data("additionalnote");
       var status = button.data("status");
       var modal = $(this);
@@ -157,6 +158,7 @@ $(document).ready(function() {
       modal.find(".modal-body #contact_number").val(contactnumber);
       modal.find(".modal-body #product_name").val(productname);
       modal.find(".modal-body #quantity").val(quantity);
+      modal.find(".modal-body #address").val(address);
       modal.find(".modal-body #additional_note").val(additionalnote);
       modal.find(".modal-body #status").val(status);
     });
@@ -184,16 +186,16 @@ $(document).ready(function() {
       modal.find(".modal-body #order_product_id").val(o_pid);
       modal.find(".modal-body #order_product_name").val(o_pname);
     }); 
+
     $("#OrderModalForm").submit(function(e) {
-      //  $("#EditProductForm").attr("action", "updateproduct");
       e.preventDefault();
       var fullname = $("#order_product_fn").val();
       var email = $("#order_product_email").val();
       var contact_number = $("#order_product_contact_number").val();
       var quantity = $("#order_product_quantity").val();
-
+      var address = $("#order_product_address").val();
       var fd = new FormData(this);
-      if(fullname == ''|| email=='' || contact_number == '' || quantity == '')
+      if(fullname == ''|| email=='' || contact_number == '' || quantity == '' || address == '')
       {
         $(".form-order-main-err").fadeIn(1000);
         $(".form-order-main-err").fadeOut(3000);
@@ -209,6 +211,7 @@ $(document).ready(function() {
          });
       }
     });
+    
     $("#OrderProcessModal").on("show.bs.modal", function(event) {
       var opbutton = $(event.relatedTarget);
       var oporid = opbutton.data("oporid");
@@ -217,6 +220,7 @@ $(document).ready(function() {
       var opcontactnumber = opbutton.data("opcontactnumber");
       var opproductname = opbutton.data("opproductname");
       var opquantity = opbutton.data("opquantity");
+      var opaddress = opbutton.data("opaddress");
       var opadditionalnote = opbutton.data("opadditionalnote");
       var opstatus = opbutton.data("opstatus");
       var modal = $(this);
@@ -226,6 +230,7 @@ $(document).ready(function() {
       modal.find(".modal-body #on_p_contact_number").val(opcontactnumber);
       modal.find(".modal-body #on_p_product_name").val(opproductname);
       modal.find(".modal-body #on_p_quantity").val(opquantity);
+      modal.find(".modal-body #on_p_address").val(opaddress);
       modal.find(".modal-body #on_p_additional_note").val(opadditionalnote);
       modal.find(".modal-body #on_p_status").val(opstatus);
     });

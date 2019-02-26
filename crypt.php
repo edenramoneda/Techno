@@ -31,7 +31,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>RAM Sweets PH</title>
+        <title>RAM Sweets PH | Admin Login</title>
         <link rel="icon" href="image/logo-min.png">   
          <?php
             include('header.html');
