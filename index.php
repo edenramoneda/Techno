@@ -126,7 +126,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Quantity</label>
-                                <input type="number" class="form-control" id="order_product_quantity" name="order_product_quantity">
+                                <input type="number" class="form-control" id="order_product_quantity" name="order_product_quantity" min="1">
                             </div>
                             <div class="form-group">
                                 <label>Additional Note</label>
