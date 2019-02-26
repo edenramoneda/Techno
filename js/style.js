@@ -1,3 +1,10 @@
+//RECAPTCHA
+var onloadCallback = function() {
+  console.log("recaptcha ready");
+  grecaptcha.render('contact_recaptcha', {
+    'sitekey' : '6LcF_pMUAAAAALX0UHZIb9Fbdxk5ylTIkXQyPWqT'
+  });
+};
 function closeNav() {
   document.getElementById("sidebar").style.width = "0";
   document.getElementById("overlay").classList.remove("overlay3");
@@ -6,6 +13,7 @@ function openNav() {
   document.getElementById("sidebar").style.width = "240px";
   document.getElementById("overlay").classList.toggle("overlay3");
 }
+
 
 $(document).ready(function() {
     //for Contact Form Index
@@ -17,17 +25,30 @@ $(document).ready(function() {
       var message = $("#m").val();
       var fd = new FormData(this);
 
-      if (fullname == "" || email == "" || message == "") {
+      var $captcha = $( '#contact_recaptcha' ),
+      response = grecaptcha.getResponse();
+    /*  if (fullname == "" || email == "" || message == "") {
         //   $(".form-feedback-err").html("All fields are required")
+        $(".contact-form-err").empty();
         $(".contact-form-err").fadeIn(1000);
+        $(".contact-form-err").append("There was an error while submitting the form. Please try again!");
         $(".contact-form-err").fadeOut(3000);
-      } else {
-        httpAjaxFD("post", "contactsent", fd).then(res => {
-          $(".contact-form-success").fadeIn(1000);
-          $("#ContactForm").trigger("reset");
-          $(".contact-form-err").hide();
-          $(".contact-form-success").fadeOut(3000);
-        });
+      }*/
+      if (fullname == "" || email == "" || message == "" || response.length === 0) {
+        //   $(".form-feedback-err").html("All fields are required")
+        $(".contact-form-err").empty();
+        $(".contact-form-err").fadeIn(1000);
+        $(".contact-form-err").append("There was an error while submitting the form. Please try again!");
+        $(".contact-form-err").fadeOut(3000);
+      }
+      else {
+            httpAjaxFD("post", "contactsent", fd).then(res => {
+              $(".contact-form-success").fadeIn(1000);
+              $("#ContactForm").trigger("reset");
+              $(".contact-form-err").hide();
+              $(".contact-form-success").fadeOut(3000);
+              grecaptcha.reset();
+            });
       }
     });
 
@@ -190,7 +211,7 @@ $(document).ready(function() {
            $(".form-order-main-err").hide(1000);
            $(".form-order-main-success").fadeOut(3000);
            setTimeout(() => {
-             window.location.href = "../Techno";
+             window.location.href = "../";
            }, 1000);
          });
       }

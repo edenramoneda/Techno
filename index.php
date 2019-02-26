@@ -133,7 +133,7 @@
                                 <textarea class="form-control" id="order_product_additional_note" name="order_product_additional_note" rows="3" placeholder="Optional"></textarea>
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="Update" class="btn btn-ess btn-sm">
+                                <input type="submit" value="Submit" class="btn btn-ess btn-sm">
                             </div>
                         </form>
                     </div>
@@ -167,7 +167,7 @@
                             <textarea class="form-control text-left" placeholder="Message" rows="3" name="m" id="m"></textarea>
                         </div>
                         <div class="form-group">
-                        <div class="g-recaptcha" data-sitekey="6Lcd34UUAAAAAAvjnBOoFrF8E4KntXAjAUEkrxko" id="g-recaptcha-response"></div><br>
+                        <div class="g-recaptcha" id="contact_recaptcha"></div><br>
                             <input type="submit" class="btn btn-light btn-sm" name="submit">
                         </div>
                     </form>
