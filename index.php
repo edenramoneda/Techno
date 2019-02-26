@@ -133,7 +133,7 @@
                                 <textarea class="form-control" id="order_product_additional_note" name="order_product_additional_note" rows="3" placeholder="Optional"></textarea>
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="Update" class="btn btn-ess btn-sm">
+                                <input type="submit" value="Submit" class="btn btn-ess btn-sm">
                             </div>
                         </form>
                     </div>
