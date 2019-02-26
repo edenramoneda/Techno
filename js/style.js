@@ -1,7 +1,7 @@
 //RECAPTCHA
-var onloadCallback = function() {
-  console.log("grecaptcha is ready!");
-  grecaptcha.render('#contact_recaptcha', {
+var onloadCallback = function(response) {
+  console.log(response);
+  grecaptcha.render('contact_recaptcha', {
     'sitekey' : '6LcF_pMUAAAAALX0UHZIb9Fbdxk5ylTIkXQyPWqT'
   });
 };
