@@ -29,13 +29,13 @@ $(document).ready(function() {
       if(recaptcha === ""){
         alert("Error");
       }
-      if (fullname == "" || email == "" || message == "") {
+    /*  if (fullname == "" || email == "" || message == "") {
         //   $(".form-feedback-err").html("All fields are required")
         $(".contact-form-err").empty();
         $(".contact-form-err").fadeIn(1000);
         $(".contact-form-err").append("There was an error while submitting the form. Please try again!");
         $(".contact-form-err").fadeOut(3000);
-      }
+      }*/
       else {
             httpAjaxFD("post", "contactsent", fd).then(res => {
               $(".contact-form-success").fadeIn(1000);
